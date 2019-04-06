@@ -16,6 +16,10 @@ class UserInfoActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_user_info)
 
+        loadProfileImage()
+    }
+
+    private fun loadProfileImage() {
         Picasso.get().load(IMAGE_URL).into(profile_image_view)
     }
 }
