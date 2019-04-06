@@ -20,7 +20,7 @@
     <TextView
             android:id="@+id/name_text_view"
             android:text="Имя"
-            style="@style/TextView.TextViewPrimary"
+            style="@style/TextView.Primary.Header"
             android:layout_marginTop="@dimen/text_small_margin"
             app:layout_constraintTop_toBottomOf="@id/profile_image_view"
             app:layout_constraintStart_toStartOf="parent"
@@ -29,7 +29,7 @@
     <TextView
             android:id="@+id/nickname_text_view"
             android:text="Ник"
-            style="@style/TextView.TextViewSecondary"
+            style="@style/TextView.Secondary"
             android:layout_marginTop="@dimen/text_small_margin"
             app:layout_constraintTop_toBottomOf="@id/name_text_view"
             app:layout_constraintStart_toStartOf="parent"
@@ -38,59 +38,56 @@
     <TextView
             android:id="@+id/description_text_view"
             android:text="Описание"
-            style="@style/TextView.TextViewPrimary"
+            style="@style/TextView.Primary"
             android:layout_marginTop="@dimen/text_small_margin"
             app:layout_constraintTop_toBottomOf="@id/nickname_text_view"
             app:layout_constraintStart_toStartOf="parent"
     />
 
-    <ImageView
-            android:id="@+id/location_image_view"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+    <TextView
+            android:id="@+id/location_icon_text_view"
             android:layout_marginTop="5dp"
-            app:srcCompat="@android:drawable/ic_menu_mylocation"
-            app:layout_constraintTop_toBottomOf="@id/description_text_view"
+            style="@style/TextView.Secondary.TextIcon"
+            app:layout_constraintBaseline_toBaselineOf="@+id/location_text_view"
             app:layout_constraintStart_toStartOf="parent"
-    />
+            android:text="@string/fa_map_marker"/>
 
     <TextView
             android:id="@+id/location_text_view"
             android:text="Местоположение"
-            android:layout_marginStart="5dp"
-            style="@style/TextView.TextViewSecondary"
-            android:layout_marginTop="@dimen/text_small_margin"
-            app:layout_constraintTop_toTopOf="@+id/location_image_view"
-            app:layout_constraintBottom_toBottomOf="@+id/location_image_view"
-            app:layout_constraintStart_toEndOf="@id/location_image_view"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            style="@style/TextView.Secondary"
+            app:layout_constraintTop_toBottomOf="@+id/description_text_view"
+            app:layout_constraintStart_toEndOf="@id/location_icon_text_view"
     />
 
     <TextView
-            android:id="@+id/following_counter_text_view"
+            android:id="@+id/following_count_text_view"
             android:text="10"
-            style="@style/TextView.TextViewPrimary"
+            style="@style/TextView.Primary.Bold"
             android:layout_marginTop="@dimen/text_small_margin"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/location_image_view"
+            app:layout_constraintTop_toBottomOf="@id/location_icon_text_view"
     />
 
     <TextView
             android:id="@+id/following_text_view"
             android:text="Читает"
             android:layout_marginStart="5dp"
-            style="@style/TextView.TextViewSecondary"
+            style="@style/TextView.Secondary"
             android:layout_marginTop="@dimen/text_small_margin"
-            app:layout_constraintTop_toBottomOf="@+id/location_image_view"
-            app:layout_constraintStart_toEndOf="@id/following_counter_text_view"
+            app:layout_constraintTop_toBottomOf="@+id/location_icon_text_view"
+            app:layout_constraintStart_toEndOf="@id/following_count_text_view"
     />
 
     <TextView
-            android:id="@+id/followers_counter_text_view"
+            android:id="@+id/followers_count_text_view"
             android:text="20"
             android:layout_marginStart="20dp"
-            style="@style/TextView.TextViewPrimary"
+            style="@style/TextView.Primary.Bold"
             android:layout_marginTop="@dimen/text_small_margin"
-            app:layout_constraintTop_toBottomOf="@+id/location_image_view"
+            app:layout_constraintTop_toBottomOf="@+id/location_icon_text_view"
             app:layout_constraintStart_toEndOf="@id/following_text_view"
     />
 
@@ -98,10 +95,10 @@
             android:id="@+id/followers_text_view"
             android:text="Читатели"
             android:layout_marginStart="5dp"
-            style="@style/TextView.TextViewSecondary"
+            style="@style/TextView.Secondary"
             android:layout_marginTop="@dimen/text_small_margin"
-            app:layout_constraintTop_toBottomOf="@+id/location_image_view"
-            app:layout_constraintStart_toEndOf="@id/followers_counter_text_view"
+            app:layout_constraintTop_toBottomOf="@+id/location_icon_text_view"
+            app:layout_constraintStart_toEndOf="@id/followers_count_text_view"
     />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
