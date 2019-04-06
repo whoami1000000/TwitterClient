@@ -8,29 +8,55 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <!--TextView style-->
+
     <style name="TextView">
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_weight">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
         <item name="android:textAppearance">@style/Text</item>
     </style>
 
-    <style name="TextView.TextViewPrimary">
-        <item name="android:textAppearance">@style/Text.TextPrimary</item>
+    <style name="TextView.Primary">
+        <item name="android:textAppearance">@style/Text.Primary</item>
     </style>
 
-    <style name="TextView.TextViewSecondary">
-        <item name="android:textAppearance">@style/Text.TextSecondary</item>
+    <style name="TextView.Primary.Header">
+        <item name="android:textAppearance">@style/Text.Primary.Header</item>
     </style>
+
+    <style name="TextView.Primary.Bold">
+        <item name="android:textAppearance">@style/Text.Primary.Bold</item>
+    </style>
+
+    <style name="TextView.Secondary">
+        <item name="android:textAppearance">@style/Text.Secondary</item>
+    </style>
+
+    <style name="TextView.Secondary.TextIcon">
+        <item name="fontFamily">@font/font_awesome</item>
+    </style>
+
+    <!--Text style-->
 
     <style name="Text" parent="TextAppearance.AppCompat">
         <item name="android:textSize">16sp</item>
+        <item name="fontFamily">sans-serif</item>
     </style>
 
-    <style name="Text.TextPrimary">
+    <style name="Text.Primary">
         <item name="android:textColor">@color/colorPrimaryText</item>
     </style>
 
-    <style name="Text.TextSecondary">
+    <style name="Text.Primary.Header">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Text.Primary.Bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Text.Secondary">
         <item name="android:textColor">@color/colorSecondaryText</item>
     </style>
 
